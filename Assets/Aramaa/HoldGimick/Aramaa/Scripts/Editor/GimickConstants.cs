@@ -5,7 +5,7 @@ namespace Aramaa.GrabAndLiftUpHigh
     /// </summary>
     public static class GimmickConstants
     {
-        public const string VER = "ver 0.6.1";
+        public const string VER = "ver 0.6.2";
 
         // 説明書
         public const string DOCUMENTATION_URL = "https://docs.google.com/document/d/141h1qxOo8ZeFPDXLFmx2fjn6jsYxf7dL6XJkSFxztec/edit?usp=sharing";
@@ -14,7 +14,7 @@ namespace Aramaa.GrabAndLiftUpHigh
         // ====================================================================================================
         // UI / メニュー
         // ====================================================================================================
-        public static readonly string WINDOW_TITLE = $"みんなでつかめるだこちてギミック {VER}";
+        public static readonly string WINDOW_TITLE = $"（試作版）みんなでつかめるだこちてギミック {VER}";
         public const string MENU_PATH = "Aramaa/みんなでつかめるだこちてギミック";
         public const string BUTTON_GENERATE_OR_REGENERATE_TEXT = "ギミックを生成 / 削除";
         public const string BUTTON_GENERATE_OR_REGENERATE_TOOLTIP = "選択したアバターにギミックを生成します。既にギミックがある場合は削除されます。";

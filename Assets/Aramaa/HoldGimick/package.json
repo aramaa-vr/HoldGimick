@@ -1,9 +1,9 @@
 {
     "name": "jp.aramaa.holdgimick",
-    "version": "0.6.1",
-    "url": "https://github.com/aramaa-vr/HoldGimick/releases/download/v0.6.1/jp.aramaa.holdgimick-0.6.1.zip?",
-    "displayName": "HoldGimick",
-    "description": "VRChatアバター向けの抱っこされることができるギミックです。バトルモードや飛行モードもあります。",
+    "version": "0.6.2",
+    "url": "https://github.com/aramaa-vr/HoldGimick/releases/download/v0.6.2/jp.aramaa.holdgimick-0.6.2.zip?",
+    "displayName": "HoldGimick_Beta",
+    "description": "試作中のBeta版です。VRChatアバター向けの抱っこされることができるギミックです。",
     "unity": "2022.3",
     "unityRelease": "22f1",
     "documentationUrl": "https://docs.google.com/document/d/141h1qxOo8ZeFPDXLFmx2fjn6jsYxf7dL6XJkSFxztec/edit?usp=sharing",
