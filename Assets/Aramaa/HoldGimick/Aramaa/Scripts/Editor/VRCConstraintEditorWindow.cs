@@ -18,6 +18,9 @@ namespace Aramaa.GrabAndLiftUpHigh.Editor
         // ====================================================================================================
         // フィールド (EditorWindow UIおよび内部状態)
         // ====================================================================================================
+        private const float WINDOW_WIDTH = 700f; // ウィンドウの幅は共通
+        private static readonly Vector2 NORMAL_WINDOW_SIZE = new Vector2(WINDOW_WIDTH, 350f); // 通常モードのサイズ
+        private static readonly Vector2 DEVELOPER_WINDOW_SIZE = new Vector2(WINDOW_WIDTH, 700f); // 開発者モードのサイズ
 
         /// <summary>
         /// 操作対象となるVRChatアバターのルートGameObject。
@@ -59,8 +62,8 @@ namespace Aramaa.GrabAndLiftUpHigh.Editor
                 true // フォーカス
             );
             // ウィンドウの最大サイズと最小サイズを設定
-            window.maxSize = new Vector2(700, 700);
-            window.minSize = new Vector2(700, 700);
+            window.maxSize = NORMAL_WINDOW_SIZE;
+            window.minSize = NORMAL_WINDOW_SIZE;
         }
 
         /// <summary>
@@ -80,8 +83,8 @@ namespace Aramaa.GrabAndLiftUpHigh.Editor
                 true // フォーカス
             );
             window._targetAvatarRootObject = selectedGameObject; // 選択中のアバターをセット
-            window.maxSize = new Vector2(700, 700);
-            window.minSize = new Vector2(700, 700);
+            window.maxSize = NORMAL_WINDOW_SIZE;
+            window.minSize = NORMAL_WINDOW_SIZE;
         }
 
         // ====================================================================================================
@@ -110,6 +113,20 @@ namespace Aramaa.GrabAndLiftUpHigh.Editor
         /// </summary>
         private void OnGUI()
         {
+            // ウィンドウサイズの動的調整
+            if (_showDeveloperInfo)
+            {
+                // 開発者モードがオンの場合、ウィンドウを大きくする
+                minSize = DEVELOPER_WINDOW_SIZE;
+                maxSize = DEVELOPER_WINDOW_SIZE;
+            }
+            else
+            {
+                // 開発者モードがオフの場合、ウィンドウを小さくする
+                minSize = NORMAL_WINDOW_SIZE;
+                maxSize = NORMAL_WINDOW_SIZE;
+            }
+
             // --- ロゴ表示 ---
             DrawLogoSection();
 
@@ -140,6 +157,18 @@ namespace Aramaa.GrabAndLiftUpHigh.Editor
                 Repaint(); // UI情報を更新し、DeveloperInfoに最新情報を表示
             }
 
+            EditorGUILayout.Space();
+
+            EditorGUILayout.HelpBox(
+                "このVCCでインストールできるツールは**お試し版**です。\n" +
+                "製品版への移行に伴い、提供を終了する可能性があります。（製品版も無料で提供されます。）\n" +
+                "最新情報は あらまあ素敵なショップ X (旧Twitter) をご確認ください。",
+                MessageType.Info
+            );
+            if (GUILayout.Button("X (旧Twitter)へ", EditorStyles.linkLabel)) // リンクの文章を短縮
+            {
+                Application.OpenURL("https://x.com/aramaa_shop");
+            }
             EditorGUILayout.Space();
 
             // 開発者モードのトグル

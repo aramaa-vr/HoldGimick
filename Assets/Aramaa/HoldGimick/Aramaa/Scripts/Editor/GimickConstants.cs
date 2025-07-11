@@ -14,8 +14,8 @@ namespace Aramaa.GrabAndLiftUpHigh
         // ====================================================================================================
         // UI / メニュー
         // ====================================================================================================
-        public static readonly string WINDOW_TITLE = $"（試作版）みんなでつかめるだこちてギミック {VER}";
-        public const string MENU_PATH = "Aramaa/みんなでつかめるだこちてギミック";
+        public static readonly string WINDOW_TITLE = $"VCCお試し版_みんなでつかめるだこちてギミック {VER}";
+        public const string MENU_PATH = "Aramaa/VCCお試し版_みんなでつかめるだこちてギミック";
         public const string BUTTON_GENERATE_OR_REGENERATE_TEXT = "ギミックを生成 / 削除";
         public const string BUTTON_GENERATE_OR_REGENERATE_TOOLTIP = "選択したアバターにギミックを生成します。既にギミックがある場合は削除されます。";
         public const string DIALOG_SUCCESS_TITLE = "完了";
