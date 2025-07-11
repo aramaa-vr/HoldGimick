@@ -5,7 +5,7 @@ namespace Aramaa.GrabAndLiftUpHigh
     /// </summary>
     public static class GimmickConstants
     {
-        public const string VER = "ver 0.6.2";
+        public const string VER = "ver 0.6.3";
 
         // 説明書
         public const string DOCUMENTATION_URL = "https://docs.google.com/document/d/141h1qxOo8ZeFPDXLFmx2fjn6jsYxf7dL6XJkSFxztec/edit?usp=sharing";
