@@ -50,6 +50,6 @@ otologicのサウンド素材の著作権は、otologicに帰属します。
 **詳細情報:**
 otologicのウェブサイトで、より詳細な情報や素材のダウンロードが可能です。
 
-[https://otologic.jp/free/](https://otologic.jp/free/)
+[https://otologic.jp](https://otologic.jp)
 
 ---
